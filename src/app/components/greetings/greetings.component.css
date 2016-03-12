@@ -1,0 +1,110 @@
+:host {
+  display: flex;
+  flex:1;
+  background: #9AF1F3;
+  /*align-items: center;
+  justify-content: center;*/
+}
+.sun {
+  position: relative;
+  height:150px;
+  width:150px;
+  border-radius: 50%;
+  margin:70px;
+  background-image: linear-gradient( -45deg,
+    #E5E828,
+    #C4ECE9 35%,
+    #E5E828 57%,
+    #E5E828);
+  box-shadow: 0 0 30px orange,
+  0 0 60px #FFFFFF,
+  0 -0 60px #FFEB00,
+  -0 0 60px #FFFFFF,
+  -0 -0 60px #FFEB00;
+   animation: blaze-light 2s infinite 2s, blaze-dark 2s infinite 2s;
+}
+@keyframes blaze-light {
+  from {
+    box-shadow: 0 0 30px orange,
+    0 0 90px #FFEB00,
+    0 -0 90px #FFEB00,
+    -0 0 90px #FFEB00,
+    -0 -0 90px #FFEB00;
+  }
+  to {
+    box-shadow: 0 0 30px orange,
+    0 0 60px #FFEB00,
+    0 -0 60px #FFEB00,
+    -0 0 60px #FFEB00,
+    -0 -0 60px #FFEB00;
+  }
+}
+@keyframes blaze-dark {
+  from {
+    box-shadow: 0 0 30px orange,
+    0 0 60px #FFFFFF,
+    0 -0 60px #FFEB00,
+    -0 0 60px #FFFFFF,
+    -0 -0 60px #FFEB00;
+  }
+  to {
+    box-shadow: 0 0 30px orange,
+    0 0 90px #FFEB00,
+    0 -0 90px #FFEB00,
+    -0 0 90px #FFEB00,
+    -0 -0 90px #FFEB00;
+  }
+}
+.sun::before,
+.sun::after {
+  height: 50px;
+  width: 50px;
+  content:'';
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  border: solid 5px black;
+  border-bottom: transparent;
+  border-right: transparent;
+  border-left: transparent;
+}
+.sun::before {
+  animation: flap-left 5s ease-in-out forwards infinite;
+  bottom: 0;
+  /*transform: rotate(25deg);*/
+}
+.sun::after {
+  animation: flap-right 5s ease-in-out forwards infinite;
+  bottom: 0;right: 50px;
+  /*transform: rotate(-25deg);*/
+}
+@keyframes flap-left {
+  0% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(25deg);
+  }
+}
+@keyframes flap-right {
+  0% {
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-25deg);
+  }
+}
+/*@keyframes flap-left-up {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}*/

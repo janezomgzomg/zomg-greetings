@@ -1,6 +1,7 @@
 import {Component} from 'angular2/core';
 import {ROUTER_DIRECTIVES} from 'angular2/router';
-import {ToolbarComponent} from './toolbar.component';
+import {ToolbarComponent} from './toolbar/toolbar.component';
+import {GreetingsComponent} from './greetings/greetings.component';
 import {NameListService} from '../../shared/services/name-list.service';
 
 @Component({
@@ -8,6 +9,7 @@ import {NameListService} from '../../shared/services/name-list.service';
   viewProviders: [NameListService],
   moduleId: module.id,
   templateUrl: './app.component.html',
-  directives: [ROUTER_DIRECTIVES, ToolbarComponent]
+  styleUrls: ['./app.component.css'],
+  directives: [ROUTER_DIRECTIVES, ToolbarComponent, GreetingsComponent]
 })
 export class AppComponent {}
