@@ -17,13 +17,12 @@ export class SeedConfig {
   DOCS_PORT            = argv['docs-port']                   || 4003;
   COVERAGE_PORT        = argv['coverage-port']               || 4004;
   APP_BASE             = argv['base']                        || '/';
+  APP_TITLE            = argv['greeting']                    || 'Well, what ARE you doing here?';
 
   ENABLE_HOT_LOADING   = argv['hot-loader'];
   HOT_LOADER_PORT      = 5578;
 
   BOOTSTRAP_MODULE     = this.ENABLE_HOT_LOADING ? 'hot_loader_main' : 'main';
-
-  APP_TITLE            = 'Greetings by Zomg';
 
   APP_SRC              = 'src';
   ASSETS_SRC           = `${this.APP_SRC}/assets`;

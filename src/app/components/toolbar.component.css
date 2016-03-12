@@ -1,24 +1,13 @@
 :host {
-  background-color: #106cc8;
-  color: rgba(255, 255, 255, 0.87);
-  display: block;
-  height: 48px;
-  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #7FFFD4;
+  color: #267B5F;
 }
 
 h1 {
-  display: inline;
-  font-size: 20px;
-  font-weight: normal;
-  letter-spacing: 0.1px;
+  letter-spacing: 10px;
   line-height: 48px;
   margin: 0;
-}
-
-more {
-  background: url("./assets/svg/more.svg");
-  float: right;
-  height: 24px;
-  margin-top: 12px;
-  width: 24px;
 }
