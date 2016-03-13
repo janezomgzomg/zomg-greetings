@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #7fffd4;
+  color: #267b5f;
+}
+
+h1 {
+  letter-spacing: 10px;
+  line-height: 48px;
+  margin: 0;
+}
