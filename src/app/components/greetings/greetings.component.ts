@@ -4,6 +4,6 @@ import {Component} from 'angular2/core';
   selector: 'greetings',
   moduleId: module.id,
   templateUrl: './greetings.component.html',
-  styleUrls: ['./greetings.component.css']
+  styleUrls: ['./greetings.component.css', './sun.component.css']
 })
 export class GreetingsComponent {}
