@@ -1,5 +1,6 @@
 :host {
   display: flex;
   flex:1;
-  background: #068C8E;
+  background: #6BE4DF;
+  flex-direction: column;
 }
